@@ -100,4 +100,58 @@ public class MiHashMap
         
         return name.length;
     }
+    
+    /**
+     * remove(String clave): elimina del mapa el elemento con la clave dada 
+     * y devuelve su valor.
+     * Si no hay esa clave en el mapa devuelve -1.
+     */
+    public int remove(String clave)
+    {
+        int exist = -1;
+        boolean find = false;
+        int pos = 0;
+        String[] newname = new String[name.length - 1];
+        int[] newnumbers = new int[numbers.length - 1];
+        while(pos < name.length && !find )
+        {
+            
+            if(name[pos]==clave)
+            {
+               find = true;
+               exist=numbers[pos];
+               
+               
+              int posit=0;
+              while( posit < name.length)
+              {
+                if(posit==pos)//si encontramos la posicion cambiamos el valor 
+                {
+                   
+                }
+                else if(posit > pos)//tras modificar el elemnto deseado se desplazan los elementos restantes una posicion
+                {
+                    newname[posit -1] = name[posit];
+                    newnumbers[posit -1]= numbers[posit]; //copia de datos en posiciones 
+                }
+                else if(posit < pos)//copia de datos en posiciones en orden hasta encontrar el elemento pasado por parametro
+                {    
+                    newname[posit] = name[posit];
+                    newnumbers[posit]= numbers[posit]; 
+                }  
+                 
+                 posit++;
+              }
+                    
+            }
+           
+            
+            pos++;
+        }
+        
+        name=newname;
+        numbers=newnumbers;
+        return exist;
+    }
+    
 }
