@@ -166,4 +166,27 @@ public class MiHashMap
        numbers=newnumbers;
     }
     
+    /**
+     * containsKey(String clave): Devuelve true si el mapa contiene la clave dada.
+     */
+    public boolean containsKey(String clave)
+    {
+        boolean find=false;
+        int index=0;
+        
+        while(index < name.length && !find)
+        {
+            if(name[index]== clave)
+            {
+                find = true;
+            }
+            index++;
+        }
+        
+
+        return find;
+    }
+    
+    
+    
 }
