@@ -154,4 +154,16 @@ public class MiHashMap
         return exist;
     }
     
+    /**
+     * clear(): vacía el mapa.
+     */
+    public void clear()
+    {
+       String[] newname = new String[name.length ];
+       int[] newnumbers = new int[numbers.length ];
+        
+       name=newname;
+       numbers=newnumbers;
+    }
+    
 }
