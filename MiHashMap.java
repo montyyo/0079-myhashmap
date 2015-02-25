@@ -13,8 +13,8 @@ public class MiHashMap
         this.numbers = new int[2];
         name[0]=("juan");
         name[1]=("pedro");
-        numbers[0]=(1);
-        numbers[1]=(2);
+        numbers[0]=(4);
+        numbers[1]=(8);
     }
     
     /**
@@ -62,4 +62,28 @@ public class MiHashMap
         
         return exist;
     }
+    
+    /**
+     * get(String clave): Devuelve el valor asociado con la clave especificada o -1
+     * en caso de que la clave no exista.
+     */
+    public int get(String clave)
+    {
+        int exist = -1; // variable para guardar el valor de elemento
+        boolean find = false;//boleano para salida del bucle
+        int index = 0;//cont de posiciones
+        
+        //recorremos el array para saber si haycoincidencias
+        while(index < name.length && !find)
+        {
+            if(name[index] == clave)
+            exist = numbers[index];
+            find=true;
+            
+        }
+        return exist;
+    }
+    
+    
+    
 }
