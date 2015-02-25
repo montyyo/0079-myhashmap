@@ -187,6 +187,27 @@ public class MiHashMap
         return find;
     }
     
+    /**
+     * containsValue(int valor): Devuelve true si el mapa contiene el valor dado.
+     */
+    public boolean containsValue(int value)
+    {
+        boolean find=false;
+        int index=0;
+        
+        while(index < numbers.length && !find)
+        {
+            if(numbers[index]== value)
+            {
+                find = true;
+            }
+            index++;
+        }
+        
+
+        return find;
+    }
+    
     
     
 }
