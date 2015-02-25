@@ -1,4 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=MiHashMap()
-numComments=1
+comment1.params=clave\ valor
+comment1.target=int\ put(java.lang.String,\ int)
+comment1.text=\r\n\ Asocia\ el\ valor\ especificado\ con\ la\ clave\ especificada.\r\n\ Si\ la\ clave\ exist\u00EDa,\ entonces\ sobreescribe\ su\ valor\ y\ \r\n\ devuelve\ el\ valor\ antiguo.\ Si\ no\ exist\u00EDa\ devuelve\ -1.\r\n
+numComments=2
